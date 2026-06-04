@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – HisaabPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --seed: #2563EB;
+      --seed-light: rgba(37, 99, 235, 0.08);
+      --seed-mid:  rgba(37, 99, 235, 0.18);
+      --bg: #F8FAFF;
+      --surface: #FFFFFF;
+      --border: rgba(37, 99, 235, 0.12);
+      --text-primary: #0F1729;
+      --text-secondary: #4B5A7A;
+      --text-muted: #8A96B0;
+      --radius: 16px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563EB 60%, #3b82f6 100%);
+      padding: 64px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 32px;
+      backdrop-filter: blur(8px);
+      position: relative;
+    }
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .hero p {
+      color: rgba(255,255,255,0.75);
+      font-size: 15px;
+      position: relative;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Intro card ── */
+    .intro-card {
+      background: var(--seed-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .intro-card .dot {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      background: var(--seed);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .intro-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .intro-card strong { color: var(--text-primary); }
+
+    /* ── Section ── */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      margin-bottom: 16px;
+      transition: box-shadow 0.2s;
+    }
+    .section:hover { box-shadow: 0 4px 24px rgba(37,99,235,0.08); }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-num {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      background: var(--seed-light);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--seed);
+    }
+    .section h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .section p, .section li {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .section li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .section li::before {
+      content: '✓';
+      color: var(--seed);
+      font-weight: 700;
+      font-size: 13px;
+      margin-top: 2px;
+      min-width: 16px;
+    }
+
+    .highlight-box {
+      background: var(--seed-light);
+      border-left: 3px solid var(--seed);
+      border-radius: 0 10px 10px 0;
+      padding: 12px 16px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    .highlight-box strong { color: var(--seed); }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, #1e3a8a, #2563EB);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .contact-card h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .contact-card p {
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .contact-card a {
+      display: inline-block;
+      background: #fff;
+      color: var(--seed);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .contact-card a:hover { opacity: 0.88; }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+    .footer strong { color: var(--text-secondary); }
+
+    /* ── Effective date ── */
+    .effective {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .effective span {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      .section { padding: 20px 18px; }
+      .container { padding: 32px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-icon">💼</div>
+    <div class="badge">Privacy Policy</div>
+    <h1>HisaabPro</h1>
+    <p>Simple, private &amp; offline expense tracking — Made in Pakistan 🇵🇰</p>
+  </div>
+
+  <div class="container">
+
+    <!-- Effective date -->
+    <p class="effective"><span>Effective Date: June 1, 2026</span></p>
+
+    <!-- Intro -->
+    <div class="intro-card">
+      <div class="dot">🔒</div>
+      <p>
+        <strong>Your privacy is our top priority.</strong> HisaabPro is built as a fully offline,
+        local-only application. We do not collect, transmit, or share any personal data. Everything
+        stays on your device — always.
+      </p>
+    </div>
+
+    <!-- 1. Information We Collect -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">01</div>
+        <h2>Information We Collect</h2>
+      </div>
+      <p>HisaabPro does <strong>not</strong> collect any personal information. The app operates entirely offline. All data you enter — expenses, categories, budgets — is stored locally on your device only.</p>
+      <ul>
+        <li>No account or registration required</li>
+        <li>No names, emails, or phone numbers collected</li>
+        <li>No financial data leaves your device</li>
+        <li>No usage analytics or crash reporting tools</li>
+      </ul>
+    </div>
+
+    <!-- 2. Local Data Storage -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">02</div>
+        <h2>Local Data Storage</h2>
+      </div>
+      <p>All app data is stored locally using your device's internal storage. This includes:</p>
+      <ul>
+        <li>Expense entries and categories you create</li>
+        <li>Budget limits and preferences you set</li>
+        <li>App settings and theme preferences</li>
+      </ul>
+      <div class="highlight-box">
+        <strong>Important:</strong> If you uninstall HisaabPro, all locally stored data will be permanently deleted. We recommend using the export feature regularly to back up your data.
+      </div>
+    </div>
+
+    <!-- 3. Internet & Permissions -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">03</div>
+        <h2>Internet Access &amp; Permissions</h2>
+      </div>
+      <p>HisaabPro does <strong>not</strong> require an internet connection to function. The app may request the following permissions on Android:</p>
+      <ul>
+        <li><strong>Storage</strong> — to export your data as a file (CSV/PDF)</li>
+        <li><strong>Internet</strong> — only used if you tap "Rate on Play Store" or "Contact Us" which opens external links in your browser</li>
+      </ul>
+      <div class="highlight-box">
+        No data is sent to any server at any time. Internet access is only triggered by your explicit action.
+      </div>
+    </div>
+
+    <!-- 4. Third-Party Services -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">04</div>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>HisaabPro does not integrate any third-party SDKs that collect data, including:</p>
+      <ul>
+        <li>No Firebase or analytics platforms</li>
+        <li>No advertising networks or ad SDKs</li>
+        <li>No crash reporting services (e.g. Crashlytics, Sentry)</li>
+        <li>No social media integrations</li>
+      </ul>
+      <p style="margin-top: 12px;">The only third-party dependency used is the <code style="background:var(--seed-light); padding: 2px 6px; border-radius: 4px; font-size: 13px; color: var(--seed);">url_launcher</code> package, which simply opens URLs in your device browser — no data is exchanged.</p>
+    </div>
+
+    <!-- 5. Children's Privacy -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">05</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>HisaabPro is a general-purpose personal finance app suitable for all ages. Since we collect no personal data whatsoever, the app inherently complies with children's privacy requirements including COPPA. No parental consent is needed as no information is collected from any user.</p>
+    </div>
+
+    <!-- 6. Data Security -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">06</div>
+        <h2>Data Security</h2>
+      </div>
+      <p>Because all data is stored locally on your device, its security depends on your device's own security (screen lock, encryption). We recommend:</p>
+      <ul>
+        <li>Enabling device screen lock and encryption</li>
+        <li>Keeping your Android OS up to date</li>
+        <li>Exporting and backing up your data regularly</li>
+      </ul>
+    </div>
+
+    <!-- 7. Changes to This Policy -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">07</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with a new effective date. Since HisaabPro collects no personal data, changes are unlikely to affect you in any meaningful way. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h2>Questions or Concerns?</h2>
+      <p>We're happy to answer any privacy-related questions. Reach out to us directly.</p>
+      <a href="mailto:support@youremail.com?subject=HisaabPro%20Privacy%20Inquiry">
+        ✉️ &nbsp;Contact Us
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <strong>© 2026 HisaabPro.</strong> All rights reserved. &nbsp;·&nbsp; Made in Pakistan 🇵🇰
+  </div>
+
+</body>
+</html>
