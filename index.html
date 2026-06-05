@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – HisaabPro</title>
+  <title>Privacy Policy – Clearfin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -199,6 +199,35 @@
     }
     .highlight-box strong { color: var(--seed); }
 
+    /* ── Mic special highlight ── */
+    .mic-box {
+      background: rgba(37, 99, 235, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-top: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .mic-box .mic-icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      background: var(--seed);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .mic-box-content p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .mic-box-content strong { color: var(--text-primary); }
+
     /* ── Contact card ── */
     .contact-card {
       background: linear-gradient(135deg, #1e3a8a, #2563EB);
@@ -267,24 +296,25 @@
 
   <!-- Hero -->
   <div class="hero">
-    <div class="hero-icon">💼</div>
+    <div class="hero-icon">💳</div>
     <div class="badge">Privacy Policy</div>
-    <h1>HisaabPro</h1>
-    <p>Simple, private &amp; offline expense tracking — Made in Pakistan 🇵🇰</p>
+    <h1>Clearfin</h1>
+    <p>Smart, private &amp; voice-powered finance tracking</p>
   </div>
 
   <div class="container">
 
     <!-- Effective date -->
-    <p class="effective"><span>Effective Date: June 1, 2026</span></p>
+    <p class="effective"><span>Effective Date: June 5, 2026</span></p>
 
     <!-- Intro -->
     <div class="intro-card">
       <div class="dot">🔒</div>
       <p>
-        <strong>Your privacy is our top priority.</strong> HisaabPro is built as a fully offline,
-        local-only application. We do not collect, transmit, or share any personal data. Everything
-        stays on your device — always.
+        <strong>Your privacy is our top priority.</strong> Clearfin is designed to keep your financial
+        data private and secure. The only network activity in the app is the optional
+        Voice Transaction feature, which sends audio to the Grok API solely to convert your speech
+        into a transaction record — nothing else is shared or stored externally.
       </p>
     </div>
 
@@ -294,19 +324,61 @@
         <div class="section-num">01</div>
         <h2>Information We Collect</h2>
       </div>
-      <p>HisaabPro does <strong>not</strong> collect any personal information. The app operates entirely offline. All data you enter — expenses, categories, budgets — is stored locally on your device only.</p>
+      <p>Clearfin does <strong>not</strong> collect any personal information. All data you enter — expenses, categories, budgets — is stored locally on your device only.</p>
       <ul>
         <li>No account or registration required</li>
         <li>No names, emails, or phone numbers collected</li>
-        <li>No financial data leaves your device</li>
+        <li>No financial data is transmitted to our servers</li>
         <li>No usage analytics or crash reporting tools</li>
       </ul>
+      <div class="highlight-box">
+        The <strong>only</strong> data that ever leaves your device is the audio you explicitly record using the Voice Transaction feature, and it is sent directly to the Grok API for transcription. We do not receive, store, or process this audio on our end.
+      </div>
     </div>
 
-    <!-- 2. Local Data Storage -->
+    <!-- 2. Microphone Permission & Voice Transactions -->
     <div class="section">
       <div class="section-head">
         <div class="section-num">02</div>
+        <h2>Microphone Permission &amp; Voice Transactions</h2>
+      </div>
+      <p>
+        Clearfin requests access to your device's microphone <strong>exclusively</strong> to power the
+        Voice Transaction feature. This feature lets you record transactions hands-free by speaking
+        naturally — for example, <em>"Spent 500 rupees on groceries"</em> — and the app will
+        automatically create the transaction entry for you.
+      </p>
+
+      <div class="mic-box">
+        <div class="mic-icon">🎙️</div>
+        <div class="mic-box-content">
+          <p>
+            <strong>How it works:</strong> When you tap the microphone button, your voice is recorded
+            on-device and sent securely to the <strong>Grok API</strong> for speech-to-text processing.
+            The API returns the transcribed text, which Clearfin uses to parse and create your
+            transaction. The audio is <strong>not stored</strong> by the Grok API beyond processing,
+            and Clearfin itself never stores raw audio files.
+          </p>
+        </div>
+      </div>
+
+      <ul style="margin-top: 16px;">
+        <li>The microphone is <strong>only activated</strong> when you explicitly tap the voice button</li>
+        <li>Audio is transmitted securely over HTTPS to the Grok API</li>
+        <li>No audio recordings are stored on our servers or your device</li>
+        <li>The microphone is never accessed in the background</li>
+        <li>You can use Clearfin fully without ever granting microphone access</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>Your choice:</strong> The Voice Transaction feature is completely optional. If you deny the microphone permission, all other app features continue to work normally. You can enable or revoke this permission at any time via your device's Settings → Apps → Clearfin → Permissions.
+      </div>
+    </div>
+
+    <!-- 3. Local Data Storage -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">03</div>
         <h2>Local Data Storage</h2>
       </div>
       <p>All app data is stored locally using your device's internal storage. This includes:</p>
@@ -316,58 +388,63 @@
         <li>App settings and theme preferences</li>
       </ul>
       <div class="highlight-box">
-        <strong>Important:</strong> If you uninstall HisaabPro, all locally stored data will be permanently deleted. We recommend using the export feature regularly to back up your data.
+        <strong>Important:</strong> If you uninstall Clearfin, all locally stored data will be permanently deleted. We recommend using the export feature regularly to back up your data.
       </div>
     </div>
 
-    <!-- 3. Internet & Permissions -->
-    <div class="section">
-      <div class="section-head">
-        <div class="section-num">03</div>
-        <h2>Internet Access &amp; Permissions</h2>
-      </div>
-      <p>HisaabPro does <strong>not</strong> require an internet connection to function. The app may request the following permissions on Android:</p>
-      <ul>
-        <li><strong>Storage</strong> — to export your data as a file (CSV/PDF)</li>
-        <li><strong>Internet</strong> — only used if you tap "Rate on Play Store" or "Contact Us" which opens external links in your browser</li>
-      </ul>
-      <div class="highlight-box">
-        No data is sent to any server at any time. Internet access is only triggered by your explicit action.
-      </div>
-    </div>
-
-    <!-- 4. Third-Party Services -->
+    <!-- 4. Internet Access & Permissions -->
     <div class="section">
       <div class="section-head">
         <div class="section-num">04</div>
-        <h2>Third-Party Services</h2>
+        <h2>Internet Access &amp; Permissions</h2>
       </div>
-      <p>HisaabPro does not integrate any third-party SDKs that collect data, including:</p>
+      <p>Clearfin requests the following permissions on Android:</p>
       <ul>
-        <li>No Firebase or analytics platforms</li>
-        <li>No advertising networks or ad SDKs</li>
-        <li>No crash reporting services (e.g. Crashlytics, Sentry)</li>
-        <li>No social media integrations</li>
+        <li><strong>Microphone (RECORD_AUDIO)</strong> — to record voice input for the Voice Transaction feature only</li>
+        <li><strong>Storage</strong> — to export your data as a file (CSV/PDF)</li>
+        <li><strong>Internet</strong> — used for: (1) sending voice audio to the Grok API for transcription, and (2) opening external links (Play Store, Contact Us) in your browser</li>
       </ul>
-      <p style="margin-top: 12px;">The only third-party dependency used is the <code style="background:var(--seed-light); padding: 2px 6px; border-radius: 4px; font-size: 13px; color: var(--seed);">url_launcher</code> package, which simply opens URLs in your device browser — no data is exchanged.</p>
+      <div class="highlight-box">
+        Internet access for voice transcription is only triggered when <strong>you explicitly tap the microphone button</strong>. No background network requests are made.
+      </div>
     </div>
 
-    <!-- 5. Children's Privacy -->
+    <!-- 5. Third-Party Services -->
     <div class="section">
       <div class="section-head">
         <div class="section-num">05</div>
-        <h2>Children's Privacy</h2>
+        <h2>Third-Party Services</h2>
       </div>
-      <p>HisaabPro is a general-purpose personal finance app suitable for all ages. Since we collect no personal data whatsoever, the app inherently complies with children's privacy requirements including COPPA. No parental consent is needed as no information is collected from any user.</p>
+      <p>Clearfin integrates the following third-party service:</p>
+      <ul>
+        <li><strong>Grok API (xAI)</strong> — used solely for speech-to-text transcription of voice transactions. Audio is sent to this API when you use the voice feature. Please refer to xAI's privacy policy for details on how they handle audio data.</li>
+      </ul>
+      <p style="margin-top: 12px;">Clearfin does <strong>not</strong> use:</p>
+      <ul>
+        <li>Firebase or any analytics platforms</li>
+        <li>Advertising networks or ad SDKs</li>
+        <li>Crash reporting services (e.g. Crashlytics, Sentry)</li>
+        <li>Social media integrations</li>
+      </ul>
+      <p style="margin-top: 12px;">The <code style="background:var(--seed-light); padding: 2px 6px; border-radius: 4px; font-size: 13px; color: var(--seed);">url_launcher</code> package is used to open URLs in your device browser — no data is exchanged.</p>
     </div>
 
-    <!-- 6. Data Security -->
+    <!-- 6. Children's Privacy -->
     <div class="section">
       <div class="section-head">
         <div class="section-num">06</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>Clearfin is a general-purpose personal finance app suitable for all ages. We do not knowingly collect personal data from any user. The Voice Transaction feature, when used by minors, should be done with parental awareness, as voice audio is briefly sent to the Grok API for processing.</p>
+    </div>
+
+    <!-- 7. Data Security -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-num">07</div>
         <h2>Data Security</h2>
       </div>
-      <p>Because all data is stored locally on your device, its security depends on your device's own security (screen lock, encryption). We recommend:</p>
+      <p>Because all app data is stored locally on your device, its security depends on your device's own security. Voice data sent to the Grok API is transmitted over secure HTTPS. We recommend:</p>
       <ul>
         <li>Enabling device screen lock and encryption</li>
         <li>Keeping your Android OS up to date</li>
@@ -375,20 +452,20 @@
       </ul>
     </div>
 
-    <!-- 7. Changes to This Policy -->
+    <!-- 8. Changes to This Policy -->
     <div class="section">
       <div class="section-head">
-        <div class="section-num">07</div>
+        <div class="section-num">08</div>
         <h2>Changes to This Policy</h2>
       </div>
-      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with a new effective date. Since HisaabPro collects no personal data, changes are unlikely to affect you in any meaningful way. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+      <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with a new effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
     </div>
 
     <!-- Contact -->
     <div class="contact-card">
       <h2>Questions or Concerns?</h2>
       <p>We're happy to answer any privacy-related questions. Reach out to us directly.</p>
-      <a href="mailto:support@youremail.com?subject=HisaabPro%20Privacy%20Inquiry">
+      <a href="mailto:clearfinance.app@gmail.com?subject=Clearfin%20Privacy%20Inquiry">
         ✉️ &nbsp;Contact Us
       </a>
     </div>
@@ -397,7 +474,7 @@
 
   <!-- Footer -->
   <div class="footer">
-    <strong>© 2026 HisaabPro.</strong> All rights reserved. &nbsp;·&nbsp; Made in Pakistan 🇵🇰
+    <strong>© 2026 Clearfin.</strong> All rights reserved.
   </div>
 
 </body>
